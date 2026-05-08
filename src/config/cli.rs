@@ -8,8 +8,8 @@ pub struct CliArgs {
     #[arg(short, long, default_value_t = 1.0, value_parser = parse_interval)]
     pub interval: f64,
 
-    /// Color theme: cyan, green, amber.
-    #[arg(short = 't', long, default_value = "cyan")]
+    /// Color theme: cyan, green, amber, nord.
+    #[arg(short = 't', long, default_value = "nord")]
     pub theme: String,
 
     /// Disable GPU monitoring (useful on systems without NVIDIA GPUs).

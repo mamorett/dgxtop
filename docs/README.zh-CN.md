@@ -8,15 +8,15 @@
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](../LICENSE)
 [![Rust](https://img.shields.io/badge/rust-1.92%2B-orange.svg)](https://www.rust-lang.org/)
-[![CI](https://github.com/DennySORA/dgxtop/actions/workflows/ci.yml/badge.svg)](https://github.com/DennySORA/dgxtop/actions/workflows/ci.yml)
-[![Release](https://github.com/DennySORA/dgxtop/actions/workflows/release.yml/badge.svg)](https://github.com/DennySORA/dgxtop/releases)
+[![CI](https://github.com/mamorett/dgxtop/actions/workflows/ci.yml/badge.svg)](https://github.com/mamorett/dgxtop/actions/workflows/ci.yml)
+[![Release](https://github.com/mamorett/dgxtop/actions/workflows/release.yml/badge.svg)](https://github.com/mamorett/dgxtop/releases)
 
 **dgxtop** 是一款专为 NVIDIA DGX 基础设施打造的全方位系统监控工具。通过交互式终端界面，实时呈现 GPU 利用率、VRAM、温度、功耗、NVLink 拓扑及系统资源。以 Rust 开发，直接访问 NVML 以实现最佳性能与可靠性。
 
 ## 快速安装
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamorett/dgxtop/main/install.sh | bash
 ```
 
 详见 [安装方式](#安装方式) 了解更多选项。
@@ -68,12 +68,12 @@ curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | 
 ### 快速安装（推荐）
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamorett/dgxtop/main/install.sh | bash
 ```
 
 ### 下载二进制文件
 
-从 [GitHub Releases](https://github.com/DennySORA/dgxtop/releases) 下载预构建二进制文件：
+从 [GitHub Releases](https://github.com/mamorett/dgxtop/releases) 下载预构建二进制文件：
 
 | 平台 | 架构 | 下载 |
 |------|------|------|
@@ -85,7 +85,7 @@ curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | 
 ### 从源码构建
 
 ```bash
-git clone https://github.com/DennySORA/dgxtop.git
+git clone https://github.com/mamorett/dgxtop.git
 cd dgxtop
 cargo build --release
 # 二进制文件：target/release/dgxtop
@@ -94,7 +94,7 @@ cargo build --release
 ### Cargo Install
 
 ```bash
-cargo install --git https://github.com/DennySORA/dgxtop.git
+cargo install --git https://github.com/mamorett/dgxtop.git
 ```
 
 ## 使用方式
@@ -113,6 +113,9 @@ dgxtop --no-gpu
 
 # 使用绿色主题
 dgxtop -t green
+
+# 使用 Nord 主题
+dgxtop -t nord
 ```
 
 ### 命令行选项
@@ -120,7 +123,7 @@ dgxtop -t green
 | 选项 | 说明 | 默认值 |
 |------|------|--------|
 | `-i, --interval <秒>` | 更新间隔（0.1–10.0 秒） | `1.0` |
-| `-t, --theme <名称>` | 颜色主题：`cyan`、`green`、`amber` | `cyan` |
+| `-t, --theme <名称>` | 颜色主题：`cyan`、`green`、`amber`、`nord` | `nord` |
 | `--no-gpu` | 禁用 GPU 监控 | `false` |
 | `--log-level <级别>` | 日志级别：`error`、`warn`、`info`、`debug` | `warn` |
 

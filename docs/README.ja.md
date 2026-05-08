@@ -8,15 +8,15 @@
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](../LICENSE)
 [![Rust](https://img.shields.io/badge/rust-1.92%2B-orange.svg)](https://www.rust-lang.org/)
-[![CI](https://github.com/DennySORA/dgxtop/actions/workflows/ci.yml/badge.svg)](https://github.com/DennySORA/dgxtop/actions/workflows/ci.yml)
-[![Release](https://github.com/DennySORA/dgxtop/actions/workflows/release.yml/badge.svg)](https://github.com/DennySORA/dgxtop/releases)
+[![CI](https://github.com/mamorett/dgxtop/actions/workflows/ci.yml/badge.svg)](https://github.com/mamorett/dgxtop/actions/workflows/ci.yml)
+[![Release](https://github.com/mamorett/dgxtop/actions/workflows/release.yml/badge.svg)](https://github.com/mamorett/dgxtop/releases)
 
 **dgxtop**は、NVIDIA DGXインフラストラクチャ向けに設計された包括的なシステム監視ツールです。インタラクティブなターミナルUIを通じて、GPU使用率、VRAM、温度、消費電力、NVLinkトポロジ、システムリソースをリアルタイムで表示します。Rustで開発され、NVMLへの直接アクセスにより最高のパフォーマンスと信頼性を実現します。
 
 ## クイックインストール
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamorett/dgxtop/main/install.sh | bash
 ```
 
 その他のオプションは[インストール方法](#インストール方法)をご覧ください。
@@ -68,12 +68,12 @@ curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | 
 ### クイックインストール（推奨）
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamorett/dgxtop/main/install.sh | bash
 ```
 
 ### バイナリダウンロード
 
-[GitHub Releases](https://github.com/DennySORA/dgxtop/releases)からビルド済みバイナリをダウンロード：
+[GitHub Releases](https://github.com/mamorett/dgxtop/releases)からビルド済みバイナリをダウンロード：
 
 | プラットフォーム | アーキテクチャ | ダウンロード |
 |-----------------|---------------|-------------|
@@ -85,7 +85,7 @@ curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | 
 ### ソースからビルド
 
 ```bash
-git clone https://github.com/DennySORA/dgxtop.git
+git clone https://github.com/mamorett/dgxtop.git
 cd dgxtop
 cargo build --release
 # バイナリ：target/release/dgxtop
@@ -94,7 +94,7 @@ cargo build --release
 ### Cargo Install
 
 ```bash
-cargo install --git https://github.com/DennySORA/dgxtop.git
+cargo install --git https://github.com/mamorett/dgxtop.git
 ```
 
 ## 使い方
@@ -113,6 +113,9 @@ dgxtop --no-gpu
 
 # 緑のカラーテーマを使用
 dgxtop -t green
+
+# Nordカラーテーマを使用
+dgxtop -t nord
 ```
 
 ### コマンドラインオプション
@@ -120,7 +123,7 @@ dgxtop -t green
 | オプション | 説明 | デフォルト |
 |-----------|------|-----------|
 | `-i, --interval <秒>` | 更新間隔（0.1–10.0秒） | `1.0` |
-| `-t, --theme <名前>` | カラーテーマ：`cyan`、`green`、`amber` | `cyan` |
+| `-t, --theme <名前>` | カラーテーマ：`cyan`、`green`、`amber`、`nord` | `nord` |
 | `--no-gpu` | GPU監視を無効化 | `false` |
 | `--log-level <レベル>` | ログレベル：`error`、`warn`、`info`、`debug` | `warn` |
 

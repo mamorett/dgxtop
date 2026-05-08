@@ -8,15 +8,15 @@
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/rust-1.92%2B-orange.svg)](https://www.rust-lang.org/)
-[![CI](https://github.com/DennySORA/dgxtop/actions/workflows/ci.yml/badge.svg)](https://github.com/DennySORA/dgxtop/actions/workflows/ci.yml)
-[![Release](https://github.com/DennySORA/dgxtop/actions/workflows/release.yml/badge.svg)](https://github.com/DennySORA/dgxtop/releases)
+[![CI](https://github.com/mamorett/dgxtop/actions/workflows/ci.yml/badge.svg)](https://github.com/mamorett/dgxtop/actions/workflows/ci.yml)
+[![Release](https://github.com/mamorett/dgxtop/actions/workflows/release.yml/badge.svg)](https://github.com/mamorett/dgxtop/releases)
 
 **dgxtop** is a comprehensive system monitoring tool purpose-built for NVIDIA DGX infrastructure. It provides real-time visibility into GPU utilization, VRAM, temperature, power draw, NVLink topology, and system resources — all in an interactive terminal UI. Built in Rust with direct NVML access for maximum performance and reliability.
 
 ## Quick Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamorett/dgxtop/main/install.sh | bash
 ```
 
 See [Installation](#installation) for more options.
@@ -81,7 +81,7 @@ See [Installation](#installation) for more options.
 ### Quick Install (Recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamorett/dgxtop/main/install.sh | bash
 ```
 
 The installer auto-detects your libc and picks the matching release target.
@@ -89,7 +89,7 @@ For NVIDIA GPU metrics, glibc (`-gnu`) builds are recommended.
 
 ### Download Binary
 
-Download pre-built binaries from [GitHub Releases](https://github.com/DennySORA/dgxtop/releases):
+Download pre-built binaries from [GitHub Releases](https://github.com/mamorett/dgxtop/releases):
 
 | Platform | Architecture | Download |
 |----------|--------------|----------|
@@ -103,7 +103,7 @@ Download pre-built binaries from [GitHub Releases](https://github.com/DennySORA/
 ### Build from Source
 
 ```bash
-git clone https://github.com/DennySORA/dgxtop.git
+git clone https://github.com/mamorett/dgxtop.git
 cd dgxtop
 cargo build --release
 # Binary: target/release/dgxtop
@@ -112,7 +112,7 @@ cargo build --release
 ### Cargo Install
 
 ```bash
-cargo install --git https://github.com/DennySORA/dgxtop.git
+cargo install --git https://github.com/mamorett/dgxtop.git
 ```
 
 ## Usage
@@ -131,6 +131,9 @@ dgxtop --no-gpu
 
 # Use green color theme
 dgxtop -t green
+
+# Use Nord color theme
+dgxtop -t nord
 ```
 
 ### Command Line Options
@@ -138,7 +141,7 @@ dgxtop -t green
 | Option | Description | Default |
 |--------|-------------|---------|
 | `-i, --interval <SECS>` | Update interval in seconds (0.1–10.0) | `1.0` |
-| `-t, --theme <NAME>` | Color theme: `cyan`, `green`, `amber` | `cyan` |
+| `-t, --theme <NAME>` | Color theme: `cyan`, `green`, `amber`, `nord` | `nord` |
 | `--no-gpu` | Disable GPU monitoring | `false` |
 | `--net-max <N>` | Max visible network interfaces / disk devices (1–20) | `3` |
 | `--log-level <LEVEL>` | Log level: `error`, `warn`, `info`, `debug` | `warn` |

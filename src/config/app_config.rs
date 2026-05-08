@@ -17,7 +17,7 @@ impl Default for AppConfig {
     fn default() -> Self {
         Self {
             update_interval_secs: 1.0,
-            color_theme: "cyan".to_owned(),
+            color_theme: "nord".to_owned(),
             gpu_enabled: true,
             redline_threshold: 80.0,
             history_length: 300,

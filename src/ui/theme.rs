@@ -30,9 +30,10 @@ pub struct Theme {
 impl Theme {
     pub fn from_name(name: &str) -> Self {
         match name {
+            "nord" => Self::nord(),
             "green" => Self::green(),
             "amber" => Self::amber(),
-            _ => Self::cyan(),
+            _ => Self::nord(),
         }
     }
 
@@ -60,6 +61,33 @@ impl Theme {
             gauge_bg: Color::Rgb(40, 42, 46),
             sparkline_color: Color::Rgb(0, 160, 180),
             row_alt_bg: Color::Rgb(22, 24, 28),
+        }
+    }
+
+    pub fn nord() -> Self {
+        Self {
+            primary: Color::Rgb(136, 192, 208),       // Nord8
+            secondary: Color::Rgb(129, 161, 193),     // Nord9
+            accent: Color::Rgb(180, 142, 173),        // Nord15
+            success: Color::Rgb(163, 190, 140),       // Nord14
+            warning: Color::Rgb(235, 203, 139),       // Nord13
+            danger: Color::Rgb(191, 97, 106),         // Nord11
+            text: Color::Rgb(236, 239, 244),          // Nord6
+            text_dim: Color::Rgb(216, 222, 233),      // Nord4
+            text_muted: Color::Rgb(76, 86, 106),      // Nord3
+            border: Color::Rgb(59, 66, 82),           // Nord1
+            border_active: Color::Rgb(136, 192, 208), // Nord8
+            background: Color::Reset,
+            highlight_bg: Color::Rgb(67, 76, 94),      // Nord2
+            header_bg: Color::Rgb(46, 52, 64),         // Nord0
+            tab_active_bg: Color::Rgb(136, 192, 208),  // Nord8
+            tab_active_fg: Color::Rgb(46, 52, 64),     // Nord0
+            gauge_low: Color::Rgb(163, 190, 140),      // Nord14
+            gauge_mid: Color::Rgb(235, 203, 139),      // Nord13
+            gauge_high: Color::Rgb(191, 97, 106),      // Nord11
+            gauge_bg: Color::Rgb(59, 66, 82),          // Nord1
+            sparkline_color: Color::Rgb(94, 129, 172), // Nord10
+            row_alt_bg: Color::Rgb(59, 66, 82),        // Nord1
         }
     }
 

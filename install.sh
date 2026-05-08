@@ -2,9 +2,9 @@
 set -euo pipefail
 
 # DGXTop installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/DennySORA/dgxtop/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/mamorett/dgxtop/main/install.sh | bash
 
-REPO="DennySORA/dgxtop"
+REPO="mamorett/dgxtop"
 BINARY="dgxtop"
 INSTALL_DIR="${INSTALL_DIR:-$HOME/.local/bin}"
 

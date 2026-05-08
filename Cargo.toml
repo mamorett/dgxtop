@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "A high-performance, interactive system monitor for NVIDIA DGX systems"
 license = "Apache-2.0"
-repository = "https://github.com/DennySORA/dgxtop"
+repository = "https://github.com/mamorett/dgxtop"
 keywords = ["nvidia", "dgx", "gpu", "monitor", "tui"]
 categories = ["command-line-utilities", "hardware-support"]
 
