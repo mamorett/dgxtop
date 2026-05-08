@@ -652,7 +652,7 @@ fn render_gpu_card(
                 .fg(theme.primary)
                 .add_modifier(Modifier::BOLD),
         ),
-        Span::styled(truncate_str(&gpu.name, 22), Style::default().fg(theme.text)),
+        Span::styled(truncate_str(&gpu.name, 32), Style::default().fg(theme.text)),
         Span::styled("  ", Style::default()),
         Span::styled(
             format!("{:.0}°C", gpu.temperature),
